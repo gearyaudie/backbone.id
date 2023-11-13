@@ -13,7 +13,7 @@ export default function Home() {
             <InstagramIcon className="mx-2 ml-6" />
             <LinkedInIcon className="mx-2" />
           </div>
-          <main className='flex justify-center py-8 mb-40'>
+          <main className='flex justify-center py-8 mb-40 px-8 sm:px-2'>
             <div className="text-center">
               <p className="text-3xl md:text-3xl lg:text-4xl font-bold max-w-screen-md leading-normal">
                 We help <span className="text-cyan-500"></span> generate
@@ -30,7 +30,7 @@ export default function Home() {
         </div>
         <main className="bg-white py-8 pb-32">
           <div className="max-w-screen-lg flex justify-center mx-auto items-center gap-48">
-            <div>
+            <div className="px-8 sm:px-2">
               <div className="font-bold text-slate-700 text-3xl">
                 Technology and branding
               </div>
@@ -52,12 +52,12 @@ export default function Home() {
                 <hr className="pt-6 pb-6"/>
                 <div>
                   <p>Our office</p>
-                  <div className="flex justify-between pt-4 flex-wrap">
+                  <div className="block justify-between pt-4 min-[500px]:flex">
                     <div>
                       <p className='font-bold'>Coming soon</p>
                       <p>No physical location as of today</p>
                     </div>
-                    <div>
+                    <div className="pt-6 min-[500px]:pt-0">
                       <p className='font-bold'>Contact me</p>
                       <p>+62 123 123 123</p>
                     </div>
@@ -67,7 +67,7 @@ export default function Home() {
             </div>
           </div>
           <footer className="px-16 pt-24 pb-16 max-w-screen-lg mx-auto">
-            <div className="flex pb-16">
+            <div className="flex pb-16 sm:justify-start justify-center">
               <div className="font-bold mr-16">
                 Home
               </div>
@@ -76,7 +76,7 @@ export default function Home() {
               </div>
             </div>
             <hr className="py-8"/>
-            <div className="flex justify-between">
+            <div className="flex sm:justify-center items-center md:lg:justify-between flex-col md:lg:flex-row">
               <div className="text-slate-700 font-bold text-xl">
                 backbone.id
               </div>
