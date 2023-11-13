@@ -26,7 +26,7 @@ export default function Navbar() {
           </ul>
         </div>
         <div>
-          <div className="sm:block lg:hidden md:hidden pr-4">
+          <div className="sm:block lg:hidden md:hidden">
             <MobileDrawer />
           </div>
         </div>

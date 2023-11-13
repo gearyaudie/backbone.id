@@ -15,7 +15,7 @@ export function MobileDrawer() {
       <nav className={navbarStyles.navbar}>
         <div className={`${navbarStyles.container2} ${navbarStyles.flex}`}>
           <nav className={navbarStyles.menuMobile}>
-            <DragHandle onClick={() => setSidebarOpened(true)} className="mr-12"/>
+            <DragHandle onClick={() => setSidebarOpened(true)}/>
             <div
               className={
                 sidebarOpened
@@ -37,7 +37,7 @@ export function MobileDrawer() {
                   <Link href="/">Home</Link>
                 </li>
                 <li onClick={() => setSidebarOpened(false)}>
-                  <Link href="/artikel">Artikel</Link>
+                  <Link href="/">Projects</Link>
                 </li>
               </div>
             </div>

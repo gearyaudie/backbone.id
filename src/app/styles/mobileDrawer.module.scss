@@ -10,17 +10,11 @@
   max-width: 1100px;
   @media (max-width: 600px) {
     padding: 0px 0px;
-    padding-right: 40px;
   }
 }
 
 .navbar {
-  background-color: #fff;
-  height: 70px;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 10;
+
 }
 
 .navbar ul {
