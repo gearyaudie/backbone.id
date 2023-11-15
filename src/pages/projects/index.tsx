@@ -10,33 +10,34 @@ export default function Projects() {
         <div>
           <Navbar />
           <div className="flex flex-col">
-            <div className="bg-white shadow-lg my-20 max-w-md mx-auto rounded-full px-12 py-4">
+            <div className="bg-white shadow-lg my-12 mt-24 max-w-md mx-auto rounded-full px-12 py-4">
               Our Socials --{'>'}
               <InstagramIcon className="mx-2 ml-6" />
               <LinkedInIcon className="mx-2" />
             </div>
-            {/* <main className='flex justify-center py-8 mb-20 px-8 sm:px-2'>
-              <div className="text-center">
-                <p className="text-3xl md:text-3xl lg:text-4xl font-bold max-w-screen-md leading-normal">
-                  Here is Our<span className="text-cyan-500"> Projects</span> Listed
-                </p>
-                <p className="py-4 max-w-lg text-stone-500 text-center justify-center mx-auto">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae odio assumenda rerum aperiam explicabo fuga?  
-                </p> 
-              </div>
-            </main> */}
           </div>
 
-          <main className="max-w-5xl mx-auto px-4 py-12 bg-white">
+          <main className="max-w-5xl mx-auto px-4 bg-white">
                 <p className="font-bold pl-4 pb-8 text-3xl text-slate-700">Notable projects</p>
                 <div className="flex flex-wrap px-4 gap-4 justify-between relative">
-                    <div>
-                        <img src="https://placehold.co/580x362" alt="" />
+                    <div className="relative">
+                        <img src="/assets/images/afloor.png" alt="" style={{width: 580}} />
+                        <div className="block md:hidden lg:hidden absolute top-0 text-white bg-black/75 h-full
+                          px-4 py-8
+                        ">
+                            <p className="text-xl font-bold pb-4 text-white underline decoration-4 underline-offset-8 
+                                decoration-cyan-500">Furniture Listing AFloor</p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat minus adipisci id assumenda reprehenderit commodi, illum laboriosam sit in eveniet.
+                          <div className="text-stone-500 pt-8">
+                              VS Code    React JS     Next JS    Netlify
+                          </div>
+                        </div>
                     </div>
-                    <div>
+                    <div className="hidden md:block lg:block">
                         <div className="flex flex-col text-right justify-between">
                             <div className="bg-white shadow-xl absolute right-2 mt-8 max-w-lg px-8 py-8 text-stone-500 z-0">
-                                <p className="text-xl font-bold pb-4 text-black">Furniture Listing AFloor</p>
+                                <p className="text-xl font-bold pb-4 text-black underline decoration-4 underline-offset-8 
+                                decoration-cyan-500">Furniture Listing AFloor</p>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat minus adipisci id assumenda reprehenderit commodi, illum laboriosam sit in eveniet.
                                 <div className="text-stone-500 pt-8">
                                     VS Code    React JS     Next JS    Netlify
@@ -48,8 +49,10 @@ export default function Projects() {
                 <div className="flex flex-wrap px-4 py-12 gap-4 justify-between relative">
                     <div>
                         <div className="flex flex-col text-right justify-between">
-                            <div className="bg-white shadow-xl absolute left-2 mt-8 max-w-lg px-8 py-8 text-stone-500 z-0">
-                                <p className="text-xl font-bold pb-4 text-black">Furniture Listing AFloor</p>
+                            <div className="bg-white shadow-xl absolute left-2 mt-20 max-w-md px-8 py-8 text-stone-500 z-0">
+                                <p className="text-xl font-bold pb-4 text-black underline decoration-4 underline-offset-8 decoration-cyan-500">
+                                  Portofolio Site
+                                </p>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat minus adipisci id assumenda reprehenderit commodi, illum laboriosam sit in eveniet.
                                 <div className="text-stone-500 pt-8">
                                     VS Code    React JS     Next JS    Netlify
@@ -58,7 +61,8 @@ export default function Projects() {
                         </div>
                     </div>
                     <div>
-                        <img src="https://placehold.co/580x362" alt="" />
+                        {/* <img src="https://placehold.co/580x362" alt="" /> */}
+                        <img src="/assets/images/portofolio.PNG" alt="" style={{width: 580}} />
                     </div>
                 </div>
           </main>

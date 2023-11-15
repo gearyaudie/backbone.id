@@ -44,6 +44,11 @@
   --card-border-rgb: 131, 134, 135;
 }
 
+.lock-scroll {
+  overflow: hidden;
+  height: 100%;
+  touch-action: none;
+}
 
 * {
   box-sizing: border-box;

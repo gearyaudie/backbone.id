@@ -8,7 +8,7 @@ export default function Home() {
       <div>
         <Navbar />
         <div className="flex flex-col">
-          <div className="bg-white shadow-lg my-20 max-w-md mx-auto rounded-full px-12 py-4">
+          <div className="bg-white shadow-lg my-12 mt-24 max-w-md mx-auto rounded-full px-12 py-4">
             Our Socials --{'>'}
             <InstagramIcon className="mx-2 ml-6" />
             <LinkedInIcon className="mx-2" />
