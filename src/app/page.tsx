@@ -16,8 +16,8 @@ export default function Home() {
           <main className='flex justify-center py-8 mb-40 px-8 sm:px-2'>
             <div className="text-center">
               <p className="text-3xl md:text-3xl lg:text-4xl font-bold max-w-screen-md leading-normal">
-                We help <span className="text-cyan-500"></span> generate
-                valuable traffic
+                We Help Businesses<span className="text-cyan-500"></span> Generate
+                Valuable Traffic
               </p>
               <p className="py-4 max-w-lg text-stone-500 text-center justify-center mx-auto">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae odio assumenda rerum aperiam explicabo fuga?  
