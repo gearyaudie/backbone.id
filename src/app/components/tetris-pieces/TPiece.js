@@ -12,7 +12,7 @@ const TPiece = forwardRef(({ className }, ref) => {
   );
 });
 
-IPiece.displayName = 'TPiece';
+TPiece.displayName = 'TPiece';
 
 
 export default motion(TPiece);
