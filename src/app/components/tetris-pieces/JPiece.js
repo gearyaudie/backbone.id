@@ -12,4 +12,6 @@ const JPiece = forwardRef(({ className }, ref) => {
   );
 });
 
+JPiece.displayName = 'JPiece';
+
 export default motion(JPiece);

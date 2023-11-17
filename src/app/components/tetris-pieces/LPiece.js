@@ -12,4 +12,6 @@ const LPiece = forwardRef(({ className }, ref) => {
   );
 });
 
+LPiece.displayName = 'LPiece';
+
 export default motion(LPiece);

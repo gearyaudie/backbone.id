@@ -69,7 +69,7 @@ export default function TetrisLoader() {
       animate(sequence, { duration: 3.5, repeat: Infinity, repeatDelay: 1 });
     };
     animateLoader();
-  }, []);
+  }, [animate]);
 
   return (
     <div ref={scope} className={styles.bg}>

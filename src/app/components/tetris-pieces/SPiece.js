@@ -12,4 +12,6 @@ const SPiece = forwardRef(({ className }, ref) => {
   );
 });
 
+SPiece.displayName = 'SPiece';
+
 export default motion(SPiece);

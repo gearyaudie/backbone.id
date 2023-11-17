@@ -15,7 +15,7 @@ export const Reveal = ({children}: Props) => {
         mainControls.start("visible");
         console.log("fire")
       }
-    }, [isInView])
+    }, [isInView, mainControls])
 
     return (
         <div ref={ref} style={{

@@ -12,4 +12,6 @@ const ZPiece = forwardRef(({ className }, ref) => {
   );
 });
 
+ZPiece.displayName = 'ZPiece';
+
 export default motion(ZPiece);

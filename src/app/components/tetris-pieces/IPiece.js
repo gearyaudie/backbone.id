@@ -11,4 +11,6 @@ const IPiece = forwardRef(({ className }, ref) => {
   );
 });
 
+IPiece.displayName = 'IPiece';
+
 export default motion(IPiece);
