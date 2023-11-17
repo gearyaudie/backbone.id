@@ -29,7 +29,7 @@ export default function Home() {
 }
 
 
-export const Content = () => {
+const Content = () => {
   return (
     <div className="bg-white">
     <div>
