@@ -1,0 +1,12 @@
+.glowingBtn {
+    position: relative;
+    animation: glow 1s linear infinite alternate;
+}
+
+@keyframes glow{
+    to {
+      -webkit-box-shadow: 0px 0px 42px 3px #0091FF;
+      -moz-box-shadow: 0px 0px 42px 3px #0091FF;
+      box-shadow: 0px 0px 42px 3px #0091FF;
+    }
+  }

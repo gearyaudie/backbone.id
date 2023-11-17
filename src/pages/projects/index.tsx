@@ -1,41 +1,67 @@
-
+"use client";
+import { Reveal } from '@/app/components/reveal';
 import Navbar from '../../app/layouts/navbar';
 import '../../globals.css'
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import { motion, useAnimation, useInView } from "framer-motion"
+import { useScroll } from 'framer-motion';
+import { useRef, useEffect } from 'react';
+import { Socials } from '@/app/components/socials';
+import { Footer } from '@/app/layouts/footer';
 
 export default function Projects() {
+
+  // const refHTML = useRef<HTMLElement>(null);
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  const mainControls = useAnimation();
+
+
+  useEffect(() => {
+    if(isInView) {
+      mainControls.start("visible");
+      console.log("fire")
+    }
+  }, [isInView])
+
+  // const { scrollYProgress } = useScroll({
+  //   target: refHTML,
+  //   offset: ["0 1", "1.33 1"]
+  // })
+
     return (
       <div className="bg-white">
         <div>
           <Navbar />
           <div className="flex flex-col">
-            <div className="bg-white shadow-lg my-12 mt-24 max-w-md mx-auto rounded-full px-12 py-4">
-              Our Socials --{'>'}
-              <InstagramIcon className="mx-2 ml-6" />
-              <LinkedInIcon className="mx-2" />
-            </div>
+            <Socials />
           </div>
 
-          <main className="max-w-5xl mx-auto px-4 bg-white">
-                <p className="font-bold pl-4 pb-8 text-3xl text-slate-700">Notable projects</p>
-                <div className="flex flex-wrap px-4 gap-4 justify-between relative">
-                    <div className="relative">
-                        <img src="/assets/images/afloor.png" alt="" style={{width: 580}} />
-                        <div className="block md:hidden lg:hidden absolute top-0 text-white bg-black/75 h-full
-                          px-4 py-8
-                        ">
-                            <p className="text-xl font-bold pb-4 text-white underline decoration-4 underline-offset-8 
-                                decoration-cyan-500">Furniture Listing AFloor</p>
-                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat minus adipisci id assumenda reprehenderit commodi, illum laboriosam sit in eveniet.
-                          <div className="text-stone-500 pt-8">
-                              VS Code    React JS     Next JS    Netlify
-                          </div>
-                        </div>
+            <main className="max-w-6xl mx-auto px-4 bg-white">
+                  <Reveal>
+                    <div className="font-bold pl-4 pt-4 text-3xl md:text-3xl lg:text-4xl text-center font-bold">Featured projects
+                    <hr style={{
+                      border: "2px solid cyan",
+                      textAlign: "center",
+                      width: '10%',
+                      margin: '0px auto'
+                    }}></hr>
                     </div>
-                    <div className="hidden md:block lg:block">
+                  </Reveal>
+                  <Reveal>
+                    <p className="py-4 max-w-lg text-stone-500 text-center justify-center mx-auto pb-16">
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae odio assumenda rerum aperiam explicabo fuga?  
+                    </p> 
+                  </Reveal>
+                  <Reveal>
+                    <div className="flex flex-wrap px-4 gap-0 justify-between relative">
+                        <div className="relative">
+                            <img src="/assets/images/afloor.png" alt="" style={{width: 580}} />
+                        </div>
                         <div className="flex flex-col text-right justify-between">
-                            <div className="bg-white shadow-xl absolute right-2 mt-8 max-w-lg px-8 py-8 text-stone-500 z-0">
+                            <div className="bg-white shadow-xl right-2 left-2 max-w-xl px-8 py-8 text-stone-500 z-0 md:lg:absolute md:lg:mt-12 md:lg:left-auto">
                                 <p className="text-xl font-bold pb-4 text-black underline decoration-4 underline-offset-8 
                                 decoration-cyan-500">Furniture Listing AFloor</p>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat minus adipisci id assumenda reprehenderit commodi, illum laboriosam sit in eveniet.
@@ -45,90 +71,63 @@ export default function Projects() {
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className="flex flex-wrap px-4 py-12 gap-4 justify-between relative">
-                    <div>
-                        <div className="flex flex-col text-right justify-between">
-                            <div className="bg-white shadow-xl absolute left-2 mt-20 max-w-md px-8 py-8 text-stone-500 z-0">
-                                <p className="text-xl font-bold pb-4 text-black underline decoration-4 underline-offset-8 decoration-cyan-500">
-                                  Portofolio Site
-                                </p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat minus adipisci id assumenda reprehenderit commodi, illum laboriosam sit in eveniet.
-                                <div className="text-stone-500 pt-8">
-                                    VS Code    React JS     Next JS    Netlify
+                  </Reveal>
+                  <Reveal>
+                    <div className="flex flex-wrap px-4 py-12 gap-0 justify-between relative">
+                        <div className="order-last md:lg:order-first">
+                            <div className="flex flex-col text-right justify-between">
+                                <div className="bg-white shadow-xl right-2 left-2 max-w-xl px-8 py-8 text-stone-500 z-0 md:lg:absolute md:lg:mt-12">
+                                    <p className="text-xl font-bold pb-4 text-black underline decoration-4 underline-offset-8 decoration-cyan-500">
+                                      Portofolio Site
+                                    </p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat minus adipisci id assumenda reprehenderit commodi, illum laboriosam sit in eveniet.
+                                    <div className="text-stone-500 pt-8">
+                                        VS Code    React JS     Next JS    Netlify
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        <div>
+                            {/* <img src="https://placehold.co/580x362" alt="" /> */}
+                            <img src="/assets/images/portofolio.PNG" alt="" style={{width: 580}} />
+                        </div>
                     </div>
-                    <div>
-                        {/* <img src="https://placehold.co/580x362" alt="" /> */}
-                        <img src="/assets/images/portofolio.PNG" alt="" style={{width: 580}} />
-                    </div>
-                </div>
-          </main>
+                  </Reveal>
+            </main>
 
-          <main className="max-w-screen-lg mx-auto px-4 py-12 bg-white">
-                <p className="font-bold pl-10 pb-8 text-3xl text-slate-700">More projects</p>
-                <div className="flex flex-wrap px-4 gap-4 justify-center">
-                    <div>
-                        <img src="https://placehold.co/300x150" alt="" />
-                    </div>
-                    <div>
-                        <img src="https://placehold.co/300x150" alt="" />
-                    </div>
-                    <div>
-                        <img src="https://placehold.co/300x150" alt="" />
-                    </div>
-                    <div>
-                        <img src="https://placehold.co/300x150" alt="" />
-                    </div>
-                </div>
-          </main>
-
-          <main className="bg-white">
-            <div className="max-w-screen-lg mx-auto">
-              <div className="bg-black text-white px-12 py-32 rounded-3xl	">
-                <div className="max-w-md">
-                  <div className="text-2xl font-bold pb-6">
-                    Tell us about your project
+          <Reveal>
+            <div className="max-w-screen-xl mx-auto px-4 py-20 pb-40 bg-white text-center">
+                  <div className="font-bold pb-8 text-3xl text-slate-700 text-center mx-auto">More projects
+                    <hr style={{
+                      border: "2px solid cyan",
+                      textAlign: "center",
+                      width: '10%',
+                      margin: '0px auto'
+                    }}></hr>
                   </div>
-                  <hr className="pt-6 pb-6"/>
-                  <div>
-                    <p>Our office</p>
-                    <div className="block justify-between pt-4 min-[500px]:flex">
+                  <div className="flex flex-wrap px-4 gap-4 justify-center">
                       <div>
-                        <p className='font-bold'>Coming soon</p>
-                        <p>No physical location as of today</p>
+                          <img src="https://placehold.co/300x150" alt="" />
                       </div>
-                      <div className="pt-6 min-[500px]:pt-0">
-                        <p className='font-bold'>Contact me</p>
-                        <p>+62 123 123 123</p>
+                      <div>
+                          <img src="https://placehold.co/300x150" alt="" />
                       </div>
-                    </div>
+                      <div>
+                          <img src="https://placehold.co/300x150" alt="" />
+                      </div>
+                      <div>
+                          <img src="https://placehold.co/300x150" alt="" />
+                      </div>
+                      <div>
+                          <img src="https://placehold.co/300x150" alt="" />
+                      </div>
+                      <div>
+                          <img src="https://placehold.co/300x150" alt="" />
+                      </div>
                   </div>
-                </div>
-              </div>
             </div>
-            <footer className="px-16 pt-24 pb-16 max-w-screen-lg mx-auto">
-              <div className="flex pb-16 sm:justify-start justify-center">
-                <div className="font-bold mr-16">
-                  Home
-                </div>
-                <div className="font-bold">
-                  Projects
-                </div>
-              </div>
-              <hr className="py-8"/>
-              <div className="flex sm:justify-center items-center md:lg:justify-between flex-col md:lg:flex-row">
-                <div className="text-slate-700 font-bold text-xl">
-                  backbone.id
-                </div>
-                <div>
-                  @backbone.id 2023
-                </div>
-              </div>
-            </footer>
-          </main>
+          </Reveal>
+          <Footer />
         </div>
       </div>
     )
