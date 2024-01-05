@@ -9,7 +9,7 @@ export const Footer = () => {
               <Reveal>            
                 <div className="max-w-md">
                   <div className="text-2xl font-bold pb-6">
-                    Tell us about your project
+                    Tell us about your business
                   </div>
                   <hr className="pt-6 pb-6"/>
                   <div>
@@ -42,10 +42,10 @@ export const Footer = () => {
             <hr className="py-8"/>
             <div className="flex sm:justify-center items-center md:lg:justify-between flex-col md:lg:flex-row">
               <div className="text-slate-700 font-bold text-xl">
-                backbone.id
+                backbones.id
               </div>
               <div>
-                @backbone.id 2023
+                @backbones.id 2023
               </div>
             </div>
           </footer>

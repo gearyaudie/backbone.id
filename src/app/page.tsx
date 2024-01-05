@@ -68,8 +68,8 @@ const Content = () => {
             </Reveal>
             <Reveal>
             <div className="pt-8 text-stone-400 max-w-md text-lg">
-              Think of us as an integral part of your team, skilled in both software development & 
-              shaping digital marketing strategies plus execution, all under one-roof.
+              Get your share of the shifting digital economy PIE. Generate traffic by being involved in 
+              technological advancements, start with creating your online presence.
             </div>
             </Reveal>
           </div>

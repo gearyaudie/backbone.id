@@ -8,7 +8,7 @@ import TetrisLoader from './components/loading'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'backbone.id',
+  title: 'backbones.id',
   description: 'Grow your business with us',
 }
 

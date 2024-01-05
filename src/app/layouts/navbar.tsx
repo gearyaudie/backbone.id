@@ -12,6 +12,22 @@ import { usePathname} from 'next/navigation';
 export default function Navbar() {
 
   const [sidebarOpened, setSidebarOpened] = useState(false);
+
+  const navbarList = [
+    {
+      title: 'Home',
+      path: '/'
+    }, 
+    {
+      title: 'Projects',
+      path: '/projects'
+    }, 
+    {
+      title: 'Blog',
+      path: '/blog'
+    }
+  ]
+
   // const router = useRouter();
   const pathName = usePathname();
 
@@ -23,22 +39,19 @@ export default function Navbar() {
         </div>
         <div className="hidden lg:block md:block">
           <ul className="flex justify-center bg-white pr-24 text-sm">
-            <li 
-              className="mr-12 text-slate-700"
-            >
-              <span className={pathName == "/"  ? "font-bold" : ""}>
-                <Link href="/">Home</Link>
-              </span>
-            </li>
-            <li 
-              className="mr-12 text-slate-700"
-            >
-                <Link href="/projects">
-                  <span className={pathName == "/projects"  ? "font-bold" : ""}>
-                      Projects
-                  </span>
-                </Link>
-            </li>
+            {
+              navbarList && navbarList.map((x) => {
+                return (
+                  <li 
+                  className="mr-12 text-slate-700"
+                  >
+                    <span className={pathName == x?.path  ? "font-bold" : ""}>
+                      <Link href={x?.path}>{ x?.title }</Link>
+                    </span>
+                  </li>
+                )
+              })
+            }
           </ul>
         </div>
         <div>
