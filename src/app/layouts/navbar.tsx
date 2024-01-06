@@ -40,10 +40,11 @@ export default function Navbar() {
         <div className="hidden lg:block md:block">
           <ul className="flex justify-center bg-white pr-24 text-sm">
             {
-              navbarList && navbarList.map((x) => {
+              navbarList && navbarList.map((x, i) => {
                 return (
                   <li 
                   className="mr-12 text-slate-700"
+                  key={i}
                   >
                     <span className={pathName == x?.path  ? "font-bold" : ""}>
                       <Link href={x?.path}>{ x?.title }</Link>
