@@ -1,7 +1,7 @@
 import { useRouter } from "next/dist/client/router";
 import Head from "next/head";
 import React from "react";
-import { ArticlesList } from "./static/article-list";
+import { ArticlesList } from "../../app/static/article-list";
 import styles from "../../styles/Article.module.scss";
 import '../../globals.css'
 import { Footer } from "@/app/layouts/footer";

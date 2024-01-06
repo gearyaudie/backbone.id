@@ -1,4 +1,4 @@
-import { Reveal } from "../../../app/components/reveal";
+import { Reveal } from "./reveal";
 
 export const BlogCard = (props: any) => {
 

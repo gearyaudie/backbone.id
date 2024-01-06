@@ -9,10 +9,10 @@ import { useScroll } from 'framer-motion';
 import { useRef, useEffect } from 'react';
 import { Socials } from '@/app/components/socials';
 import { Footer } from '@/app/layouts/footer';
-import { BlogCard } from './components/blog-card';
-import { ArticlesList } from './static/article-list';
+import { BlogCard } from '../../app/components/blog-card';
+import { ArticlesList } from '../../app/static/article-list';
 
-export default function Projects() {
+export default function Blogs() {
 
   // const refHTML = useRef<HTMLElement>(null);
   const ref = useRef(null);
