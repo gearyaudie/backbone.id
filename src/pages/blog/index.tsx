@@ -11,6 +11,7 @@ import { Socials } from '@/app/components/socials';
 import { Footer } from '@/app/layouts/footer';
 import { BlogCard } from '../../app/components/blog-card';
 import { ArticlesList } from '../../app/static/article-list';
+import { NeedHelp } from '@/app/components/need-help';
 
 export default function Blogs() {
 
@@ -66,6 +67,7 @@ export default function Blogs() {
             </main>
 
           <Footer />
+          <NeedHelp />
         </div>
       </div>
     )

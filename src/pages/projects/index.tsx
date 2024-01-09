@@ -9,6 +9,7 @@ import { useScroll } from 'framer-motion';
 import { useRef, useEffect } from 'react';
 import { Socials } from '@/app/components/socials';
 import { Footer } from '@/app/layouts/footer';
+import { NeedHelp } from '@/app/components/need-help';
 
 export default function Projects() {
 
@@ -128,6 +129,7 @@ export default function Projects() {
             </div>
           </Reveal>
           <Footer />
+          <NeedHelp />
         </div>
       </div>
     )

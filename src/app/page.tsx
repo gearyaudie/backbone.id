@@ -7,15 +7,32 @@ import { Reveal } from './components/reveal';
 import { Footer } from './layouts/footer';
 import { useRouter } from "next/navigation";
 import TetrisLoader from './components/loading';
+import { NeedHelp } from './components/need-help';
 
 export default function Home() {
 
   const [timer, setTimer] = React.useState(true);
 
+  const [tetrisLoaded, setTetrisLoaded] = React.useState<any>(null);
+
+  const setLoaderSession = async () => {
+    let isTetrisLoaded = await sessionStorage.getItem("tetrisIsLoaded");
+    
+    if(!tetrisLoaded) {
+      await sessionStorage.setItem("tetrisIsLoaded", "true");
+    } else {
+      setTetrisLoaded(null);
+      await sessionStorage.removeItem("tetrisIsLoaded");
+    }
+    await setTetrisLoaded(isTetrisLoaded);
+  }
+
   React.useEffect(() => {
     setTimeout(() => {
       setTimer(false)
-    }, 4000)
+    }, 3500)
+    setLoaderSession();
+
   }, [])
 
   return (
@@ -23,7 +40,7 @@ export default function Home() {
       //   <Content />
       // </Suspense>
       <>
-      { timer ? <TetrisLoader /> : <Content /> }
+      { timer && !tetrisLoaded ? <TetrisLoader /> : <Content /> }
       </>
   )
 }
@@ -79,6 +96,7 @@ const Content = () => {
         </div>
       </main>
       <Footer />
+      <NeedHelp />
     </div>
   </div>
   )
