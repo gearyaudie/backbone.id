@@ -55,7 +55,7 @@ export default function Blogs() {
                   </Reveal>
             </main>
             
-            <main className="max-w-6xl my-16 mx-auto flex flex-wrap justify-center align-center gap-8 p-4">
+            <main className="max-w-6xl my-16 mx-auto flex flex-wrap justify-center align-center gap-1 p-4">
               {
                 articles && articles.map((x, i) => {
                   return (
