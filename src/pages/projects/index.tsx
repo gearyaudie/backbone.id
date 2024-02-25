@@ -79,18 +79,17 @@ export default function Projects() {
                             <div className="flex flex-col text-right justify-between">
                                 <div className="bg-white shadow-xl right-2 left-2 max-w-xl px-8 py-8 text-stone-500 z-0 md:lg:absolute md:lg:mt-12">
                                     <p className="text-xl font-bold pb-4 text-black underline decoration-4 underline-offset-8 decoration-cyan-500">
-                                      Portofolio Site
+                                      MPX "Motorcycle spareparts" company
                                     </p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat minus adipisci id assumenda reprehenderit commodi, illum laboriosam sit in eveniet.
+                                      Full stack app. Listing page, UI/UX, and Crud API.
                                     <div className="text-stone-500 pt-8">
-                                        VS Code    React JS     Next JS    Netlify
+                                        VS Code    React JS     Next JS    Netlify    GoLang    Heroku    MongoDB
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div>
-                            {/* <img src="https://placehold.co/580x362" alt="" /> */}
-                            <img src="/assets/images/portofolio.PNG" alt="" style={{width: 580}} />
+                            <img src="/assets/images/mpx.PNG" alt="" style={{width: 580}} />
                         </div>
                     </div>
                   </Reveal>
