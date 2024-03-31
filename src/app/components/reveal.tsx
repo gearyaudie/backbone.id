@@ -13,7 +13,6 @@ export const Reveal = ({children}: Props) => {
     useEffect(() => {
       if(isInView) {
         mainControls.start("visible");
-        console.log("fire")
       }
     }, [isInView, mainControls])
 

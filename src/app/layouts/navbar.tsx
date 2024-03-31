@@ -34,7 +34,8 @@ export default function Navbar() {
   return (
     <div className="bg-white fixed w-full z-50">
       <div className="flex justify-between items-center max-w-screen-xl mx-auto py-4 px-6 flex-wrap">
-        <div className="text-slate-700 font-bold text-xl">
+        <div className="text-slate-700 font-bold text-xl flex items-center">
+          <img src="/assets/images/backbones-logo.png" alt="" className="w-8 h-8 mr-2" />
           backbones.id
         </div>
         <div className="hidden lg:block md:block">
@@ -46,7 +47,7 @@ export default function Navbar() {
                   className="mr-12 text-slate-700"
                   key={i}
                   >
-                    <span className={pathName == x?.path  ? "font-bold" : ""}>
+                    <span>
                       <Link href={x?.path}>{ x?.title }</Link>
                     </span>
                   </li>

@@ -5,7 +5,7 @@ import { Reveal } from './reveal';
 export const Socials = () => {
     return (
         <Reveal>
-            <div className="bg-white shadow-lg my-12 mt-24 max-w-xs mx-auto rounded-full px-12 py-4">
+            <div className="bg-white shadow-lg mt-24 mb-12 max-w-xs mx-auto rounded-full px-12 py-4">
                 Our Socials --{'>'}
                 <InstagramIcon className="mx-2 ml-6" />
                 <LinkedInIcon className="mx-2" />

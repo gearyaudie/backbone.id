@@ -3,6 +3,31 @@
     animation: glow 1s linear infinite alternate;
 }
 
+.chatBubble {
+  position: relative;
+  background: #034C59; /* Replace with your actual color code */
+  color: white;
+  padding: 16px;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 350px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-right: 12%; /* Adjust based on your layout */
+  top: 0;
+}
+
+.chatBubble::after {
+  content: "";
+  position: absolute;
+  bottom: 15px; /* Adjust this value to move the tail up or down */
+  right: -5px; /* Adjust so the tail comes out from the right edge */
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 0 10px 20px;
+  border-color: #034C59; /* Match the bubble color */
+}
+
 @keyframes glow{
     to {
       -webkit-box-shadow: 0px 0px 42px 3px #0091FF;
