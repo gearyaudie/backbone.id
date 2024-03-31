@@ -120,7 +120,7 @@ const Content = () => {
           <div className="flex-[2.5] flex-col">
             <div className="relative bg-[#45A29E] border-2 border-[#034C59] text-[#E0FFFF] h-fit pl-8 pt-4 pb-44 rounded-xl overflow-hidden">
               <div className="text-2xl font-semibold py-2 text-[#E0FFFF]">Affordability</div>
-                  Pricing that makes sense! No corners cut. <br />Get your money's worth with your desired package.
+                  Pricing that makes sense! No corners cut. <br />Get your money&apos;s worth with your desired package.
                   <div className="absolute bottom-0 right-0 left-10 bg-white w-full">
                     <Reveal>
                       <div className="flex px-4 py-4 items-center">
