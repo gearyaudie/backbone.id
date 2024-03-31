@@ -6,11 +6,14 @@ import { Socials } from './components/socials';
 import { Reveal } from './components/reveal';
 import { Footer } from './layouts/footer';
 import { useRouter } from "next/navigation";
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import TetrisLoader from './components/loading';
 import { NeedHelp } from './components/need-help';
 import { useAnimation, useInView, motion } from "framer-motion";
 import AnimatedText from './components/animated-text';
 import SpeechBubble from './components/speech-bubble';
+import FAQComponent from './components/faq';
+import { RevealAbsolute } from './components/reveal-absolute';
 
 export default function Home() {
 
@@ -50,6 +53,25 @@ export default function Home() {
 
 
 const Content = () => {
+  const items = [
+    {
+      title: 'Can I get a refund?',
+      content: (
+        <>
+          <p>Yes you can get a 50% refund on the total amount given that you requested it within 7 days of Work In Progress.</p>
+        </>
+      ),
+    },
+    {
+      title: 'Is this a scam?',
+      content: (
+        <>
+          <p>No.</p>
+        </>
+      ),
+    },
+    // Add more items as needed
+  ];
 
   return (
     <div className="bg-white">
@@ -57,13 +79,13 @@ const Content = () => {
       <Navbar />
       <div className="relative flex flex-col">
         {/* <Socials /> */}
-        <main className='flex justify-center py-4 mb-[260px] mt-32 px-8 sm:px-2'>
+        <main className='flex justify-center py-4 lg:mb-[280px] mt-32 px-8 sm:px-2'>
           <div className="text-center">
-              <p className="text-3xl md:text-3xl lg:text-6xl font-bold max-w-screen-md lg:leading-tight">
+              <p className="text-4xl lg:text-6xl px-10 font-bold max-w-screen-md lg:leading-tight">
                 <AnimatedText text="We Bring Your Precious Business Online" />
               </p>
               <Reveal>
-                <p className="pt-6 pb-4 text-stone-500 text-center justify-center mx-auto">
+                <p className="pb-4 text-stone-500 text-center justify-center mx-auto md:pt-6">
                   Design? Code? No-Code? We got you!
                 </p> 
               </Reveal>
@@ -79,47 +101,7 @@ const Content = () => {
             </Reveal>
           </div>
         </main>
-        <div className="absolute left-0 right-0 bottom-[-40%] max-w-[1600px] mx-auto">
-          <div className="absolute right-[18%] top-0 flex gap-6">
-            <div className="bg-white border-secondary border-2 mt-2 text-secondary rounded-full p-4 w-12 h-12 font-bold text-xl flex justify-center items-center top-4">
-                1
-            </div>
-            <div className="bg-secondary shadow-lg rounded-2xl w-full max-w-[350px] p-4 mb-2">
-              <div className="text-xl font-medium text-white">Affordable</div>
-              {/* <div className="text-3xl text-accent font-semibold pt-2">Design + code</div> */}
-              <div className="text-sm text-stone-200 mt-2">Will be made available with full transparency</div>
-            </div>
-          </div>
-          <div className="absolute right-[18%] top-28 flex gap-6">
-            <div className="bg-white border-secondary border-2 mt-2 text-secondary rounded-full p-4 w-12 h-12 font-bold text-xl flex justify-center items-center top-4">
-                2
-            </div>
-            <div className="bg-secondary shadow-lg rounded-2xl w-full max-w-[350px] p-4 mb-2">
-              <div className="text-xl font-medium text-white">Quick turnaround</div>
-              {/* <div className="text-3xl text-accent font-semibold pt-2">Design + code</div> */}
-              <div className="text-sm text-stone-200 mt-2">Will be made available with full transparency</div>
-            </div>
-          </div>
-          <div className="absolute right-[16%] top-64 flex gap-6">
-            <div className="bg-white shadow-lg rounded-2xl w-full max-w-[350px] p-4 mb-2">
-              <div className="text-xl font-medium">Have ownership</div>
-              {/* <div className="text-3xl text-primary font-semibold pt-2">1x, 2x+ Projects</div> */}
-              <div className="text-sm text-stone-500 mt-2">Will be made available with full transparency</div>
-            </div>
-            <div className="bg-secondary border-white border-2 mt-2 text-white rounded-full p-4 w-12 h-12 font-bold text-xl flex justify-center items-center top-4">
-                3
-            </div>
-          </div>
-          <div className="absolute right-[16%] bottom-16 flex gap-6">
-            <div className="bg-white shadow-lg rounded-2xl w-full max-w-[350px] p-4 mb-2">
-              <div className="text-xl font-medium">Long term, scalable</div>
-              {/* <div className="text-3xl text-primary font-semibold pt-2">1x, 2x+ Projects</div> */}
-              <div className="text-sm text-stone-500 mt-2">Flexible relationship duration</div>
-            </div>
-            <div className="bg-secondary border-white border-2 mt-2 text-white rounded-full p-4 w-12 h-12 font-bold text-xl flex justify-center items-center top-4">
-                4
-            </div>
-          </div>
+        <div className="relative left-0 right-0 bottom-[-40%] max-w-[1600px] mx-auto flex justify-center items-end lg:absolute">
           <motion.div
             className="box"
             initial={{ opacity: 0, scale: 0.5 }}
@@ -129,58 +111,102 @@ const Content = () => {
             delay: 0.5,
             ease: [0.16, 1, 0.3, 1],
           }}>
-            <img src="/assets/images/laptop-nihao.png" alt="" className='max-w-[900px] ml-12' />
+            <img src="/assets/images/laptop-nihao.png" alt="" className="w-full max-w-[1000px] h-auto pb-20 px-8 lg:pb-0" />
           </motion.div>
         </div>
       </div>
-      <main className="bg-secondary py-32 pt-[280px] z-10">
+      <main className="bg-secondary py-2 lg:py-32 lg:pt-[360px]">
+        <div className="max-w-[1200px] mx-auto flex gap-6 mt-24 px-10">
+          <div className="flex-[2.5] flex-col">
+            <div className="relative bg-[#45A29E] border-2 border-[#034C59] text-[#E0FFFF] h-fit pl-8 pt-4 pb-44 rounded-xl overflow-hidden">
+              <div className="text-2xl font-semibold py-2 text-[#E0FFFF]">Affordability</div>
+                  Pricing that makes sense! No corners cut. <br />Get your money's worth with your desired package.
+                  <div className="absolute bottom-0 right-0 left-10 bg-white w-full">
+                    <Reveal>
+                      <div className="flex px-4 py-4 items-center">
+                        <div className="bg-[#f2f2f2] p-2 pr-0 rounded-lg flex justify-center items-center ml-4">
+                          <ArrowBackIosIcon className="text-black"/>
+                        </div>
+                        <div className="text-black pl-4 text-lg font-medium">Pricing Details</div>
+                      </div>
+                      <hr className="px-2 max-w-[90%] mx-auto" />
+                      <div className="text-black px-8 pt-4">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis earum nisi, odio in consectetur voluptatem a quod explicabo obcaecati molestiae?
+                      </div>
+                    </Reveal>
+                  </div>
+            </div>
+            <div className="flex gap-4 pt-4 h-fit flex-wrap">
+              <div className="bg-[#02303A] border-2 border-[#045A68] text-[#AFEEEE] p-4 px-6 rounded-xl flex-1">
+                  <div className="text-2xl font-semibold py-2 text-[#E0FFFF]">Long term, scalable</div>
+                  Have a multiple time deal, <br />
+                  Have a one time deal
+                  <Reveal>
+                    <div className="flex justify-end pt-10">
+                        <img src="/assets/images/snorlax.png" alt="" className="max-w-[180px] w-fit h-full" />
+                    </div>
+                  </Reveal>
+              </div>
+              <div className="bg-[#02303A] border-2 border-[#045A68] text-[#AFEEEE] p-4 px-6 rounded-xl flex-1">
+                  <div className="text-2xl font-semibold py-2 text-[#E0FFFF]">Quick turnaround</div>
+                    Get it done asap. <br />
+                    Per project requirements.
+                    <Reveal>
+                      <div className="pt-16 text-right">
+                            <span className="font-semibold text-4xl">2 weeks</span> on average
+                      </div>
+                    </Reveal>
+              </div>
+          </div>
+          </div>
+          <div className="hidden relative bg-[#02303A] border-2 border-[#045A68] text-[#AFEEEE] flex-1 rounded-xl overflow-hidden
+            md:block
+          ">
+            <div className="text-2xl font-semibold py-2 text-[#E0FFFF] p-4 px-6 pt-6">Have ownership</div>
+            <div className="px-6">Your product is fully yours.</div>
+            <div className="px-6">Source code, figma links.</div>
+            <hr className="border border-[#045A68] mt-8"/>
+            <RevealAbsolute>
+              <img src="/assets/images/figma-test.png" alt="" className="absolute object-cover w-full h-full" />
+            </RevealAbsolute>
+          </div>
+        </div>
       </main>
       <main className="bg-black py-20 mb-32 z-10">
         <div className="max-w-screen-xl mx-auto">
-          <div className="font-bold text-white text-3xl text-center lg:text-6xl lg:leading-tight">
-            Take Advantage of Digitalization
+          <div className="font-bold text-white text-3xl text-center px-8 lg:text-6xl lg:leading-tight">
+            <AnimatedText text="Take Advantage of Digitalization" />
             <div className="mt-2 w-[150px] h-[4px] bg-accent mx-auto"></div>
           </div>
-          <div className="flex items-center max-w-[900px] mx-auto mt-16 gap-12">
-            <img src="/assets/images/pie-chart-2-1.png" alt="" className="mx-auto max-w-[250px]"/>
-            <div className="text-stone-200">
-              <div className="text-white text-3xl font-semibold pb-4">50% of businesses are online</div>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam provident repellendus alias doloremque 
-              aspernatur distinctio sapiente sed, debitis consequuntur qui!
+          <Reveal>
+            <div className="flex items-center max-w-[900px] mx-auto mt-16 gap-12 flex-wrap lg:flex-nowrap">
+              <img src="/assets/images/pie-chart-2-1.png" alt="" className="mx-auto max-w-[250px]"/>
+              <div className="text-stone-200 px-12">
+                <div className="text-white text-3xl font-semibold pb-4">50% of businesses are online</div>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam provident repellendus alias doloremque 
+                aspernatur distinctio sapiente sed, debitis consequuntur qui!
+              </div>
             </div>
-          </div>
-          <div className="flex items-center max-w-[800px] mx-auto mt-16 gap-12">
-            <div className="text-stone-200">
-              <div className="text-white text-3xl font-semibold pb-4">50% of businesses are online</div>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam provident repellendus alias doloremque 
-              aspernatur distinctio sapiente sed, debitis consequuntur qui!
+          </Reveal>
+          <Reveal>
+            <div className="flex items-center max-w-[900px] mx-auto mt-16 gap-12 flex-wrap lg:flex-nowrap">
+              <div className="text-stone-200 px-12 order-2 lg:order-1">
+                <div className="text-white text-3xl font-semibold pb-4">50% of businesses are online</div>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam provident repellendus alias doloremque 
+                aspernatur distinctio sapiente sed, debitis consequuntur qui!
+              </div>
+              <img src="/assets/images/pie-chart-2-2.png" alt="" className="mx-auto max-w-[250px] order-1 lg:order-2"/>
             </div>
-            <img src="/assets/images/pie-chart-2-2.png" alt="" className="mx-auto max-w-[250px]"/>
-          </div>
+          </Reveal>
 
         </div>
       </main>
-        {/* <div className="max-w-screen-lg flex flex-col justify-center mx-auto items-center md:lg:gap-30 md:lg:flex-row">
-          <div className="px-8">
-            <Reveal>
-              <div className="font-bold text-white text-3xl lg:text-6xl lg:leading-tight">
-              Take Advantage of Digitalization
-                <hr className="w-[15%] border-2 border-accent mt-4" />
-              </div>
-            </Reveal>
-            <Reveal>
-            <div className="pt-8 text-[#F5F5F5] max-w-md text-lg">
-              Get your share of the shifting digital economy PIE. Generate traffic by being involved in 
-              technological advancements, start with creating your online presence.
-            </div>
-            </Reveal>
-          </div>
-          <Reveal>
-            <img src="/assets/images/phone.png" alt="test" className='w-96 pt-40'/>
-          </Reveal>
-        </div> */}
-
-
+      <main className="bg-white max-w-[900px] mx-auto mb-32 text-center">
+        <div className="font-bold text-4xl pb-12"><AnimatedText text="FAQs" /></div>
+        <Reveal>
+          <FAQComponent items={items}/>
+        </Reveal>
+      </main>
       <Footer />
       {/* <NeedHelp /> */}
     </div>
