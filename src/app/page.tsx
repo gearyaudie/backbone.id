@@ -14,6 +14,7 @@ import AnimatedText from './components/animated-text';
 import SpeechBubble from './components/speech-bubble';
 import FAQComponent from './components/faq';
 import { RevealAbsolute } from './components/reveal-absolute';
+import LaptopProjects from './components/laptop-projects';
 
 export default function Home() {
 
@@ -73,6 +74,14 @@ const Content = () => {
     // Add more items as needed
   ];
 
+  const images = [
+    '/assets/images/nihao-laptop.webp',
+    '/assets/images/mpx-laptop.webp',
+    '/assets/images/afloor-laptop.webp',
+    '/assets/images/el-laptop.webp',
+    // Add more image URLs as needed
+  ];
+
   return (
     <div className="bg-white">
     <div>
@@ -111,7 +120,8 @@ const Content = () => {
             delay: 0.5,
             ease: [0.16, 1, 0.3, 1],
           }}>
-            <img src="/assets/images/laptop-nihao.png" alt="" className="w-full max-w-[1000px] h-auto pb-20 px-8 lg:pb-0" />
+            <LaptopProjects images={images} />
+            <img src="/assets/images/laptop.png" alt="" className="absolute w-full max-w-[1000px] top-0 h-auto pb-20 px-8 lg:pb-0 z-100" />
           </motion.div>
         </div>
       </div>
