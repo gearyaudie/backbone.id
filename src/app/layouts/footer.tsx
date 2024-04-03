@@ -10,7 +10,7 @@ export const Footer = () => {
                     Unlock your digital potential now
                   </div>
                   <div className="text-[#C9C9C9]">
-                    Experience digital transformation firsthand. Explore tailored solutions to elevate your online impact."
+                    Experience digital transformation firsthand. Explore tailored solutions to elevate your online impact.
                   </div>
                   <div className="bg-[#A0B2B4] text-white rounded-2xl py-2 px-6 mt-4 w-fit font-lg font-semibold cursor-pointer">
                     Start now
