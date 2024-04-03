@@ -90,7 +90,7 @@ const Content = () => {
         {/* <Socials /> */}
         <main className='flex justify-center py-4 lg:mb-[280px] mt-32 px-8 sm:px-2'>
           <div className="text-center">
-              <p className="text-4xl lg:text-6xl px-10 font-bold max-w-screen-md lg:leading-tight">
+              <p className="text-3xl lg:text-6xl px-10 font-bold max-w-screen-md lg:leading-tight">
                 <AnimatedText text="We Bring Your Precious Business Online" />
               </p>
               <Reveal>
@@ -110,7 +110,7 @@ const Content = () => {
             </Reveal>
           </div>
         </main>
-        <div className="relative left-0 right-0 bottom-[-40%] max-w-[1600px] mx-auto flex justify-center items-end lg:absolute">
+        <div className="relative left-0 right-0 bottom-[-40%] max-w-[1600px] mx-auto flex justify-center items-end pb-20 lg:pb-0 lg:absolute">
           <motion.div
             className="box"
             initial={{ opacity: 0, scale: 0.5 }}
@@ -121,7 +121,7 @@ const Content = () => {
             ease: [0.16, 1, 0.3, 1],
           }}>
             <LaptopProjects images={images} />
-            <img src="/assets/images/laptop.png" alt="" className="absolute w-full max-w-[1000px] top-0 h-auto pb-20 px-8 lg:pb-0 z-100" />
+            <img src="/assets/images/laptop.png" alt="" className="absolute w-full max-w-[1000px] top-0 h-auto px-8 z-100" />
           </motion.div>
         </div>
       </div>
@@ -153,7 +153,7 @@ const Content = () => {
                   Have a one time deal
                   <Reveal>
                     <div className="flex justify-end pt-10">
-                        <img src="/assets/images/snorlax.png" alt="" className="max-w-[180px] w-fit h-full" />
+                        {/* <img src="/assets/images/snorlax.png" alt="" className="max-w-[180px] w-fit h-full" /> */}
                     </div>
                   </Reveal>
               </div>
