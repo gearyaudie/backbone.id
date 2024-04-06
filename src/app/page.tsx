@@ -92,13 +92,13 @@ const Content = () => {
       <Navbar />
       <div className="relative flex flex-col">
         {/* <Socials /> */}
-        <main className='flex justify-center py-4 lg:mb-[280px] mt-32 px-8 sm:px-2'>
+        <main className='flex justify-center py-4 lg:mb-[280px] mt-32 px-2 md:px-8'>
           <div className="text-center">
               <p className="text-3xl lg:text-6xl px-10 font-bold max-w-screen-md lg:leading-tight">
                 <AnimatedText text="We Bring Your Precious Business Online" />
               </p>
               <Reveal>
-                <p className="text-stone-500 text-center justify-center mx-auto md:pt-6">
+                <p className="pt-4 text-stone-500 text-center justify-center mx-auto md:pt-6">
                   Design? Code? No-Code? We got you!
                 </p> 
               </Reveal>
