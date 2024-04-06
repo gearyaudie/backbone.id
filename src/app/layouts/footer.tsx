@@ -1,6 +1,11 @@
 import { Reveal } from "../components/reveal"
 
 export const Footer = () => {
+
+  const openLink = (url: string) => { 
+    window.open(url, "_blank");
+  }
+
     return (
         <main className="bg-white my-48">
         <div className="max-w-screen-lg mx-auto">
@@ -12,7 +17,9 @@ export const Footer = () => {
                   <div className="text-[#C9C9C9]">
                     Experience digital transformation firsthand. Explore tailored solutions to elevate your online impact.
                   </div>
-                  <div className="bg-[#A0B2B4] text-white rounded-2xl py-2 px-6 mt-4 w-fit font-lg font-semibold cursor-pointer">
+                  <div className="bg-[#A0B2B4] text-white rounded-2xl py-2 px-6 mt-4 w-fit font-lg font-semibold cursor-pointer"
+                    onClick={() => openLink('https://wa.link/wnzkgo')}
+                  >
                     Start now
                   </div>
                 </div>

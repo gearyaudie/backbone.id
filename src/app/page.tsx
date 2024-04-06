@@ -74,6 +74,10 @@ const Content = () => {
     // Add more items as needed
   ];
 
+  const openLink = (url: string) => { 
+    window.open(url, "_blank");
+  }
+
   const images = [
     '/assets/images/nihao-laptop.webp',
     '/assets/images/mpx-laptop.webp',
@@ -94,13 +98,15 @@ const Content = () => {
                 <AnimatedText text="We Bring Your Precious Business Online" />
               </p>
               <Reveal>
-                <p className="pb-4 text-stone-500 text-center justify-center mx-auto md:pt-6">
+                <p className="text-stone-500 text-center justify-center mx-auto md:pt-6">
                   Design? Code? No-Code? We got you!
                 </p> 
               </Reveal>
             <Reveal>
               <div className="flex my-8 justify-center gap-6">
-                <button className={`${styles.glowingBtn} bg-primary hover:bg-cyan-700 text-white font-bold py-2 px-8 rounded text-lg rounded-full`}>
+                <button className={`${styles.glowingBtn} bg-primary hover:bg-cyan-700 text-white font-bold py-2 px-8 rounded text-lg rounded-full`}
+                  onClick={() => openLink('https://wa.link/wnzkgo')}
+                >
                   Start now
                 </button>
                 {/* <button className={`bg-white border-2 border-primary text-primary font-semibold py-2 px-8 rounded text-lg rounded-full`}>
@@ -121,7 +127,7 @@ const Content = () => {
             ease: [0.16, 1, 0.3, 1],
           }}>
             <LaptopProjects images={images} />
-            <img src="/assets/images/laptop.png" alt="" className="absolute w-full max-w-[1000px] top-0 h-auto px-8 z-100" />
+            <img src="/assets/images/laptop.webp" alt="" className="absolute w-full max-w-[1000px] top-0 h-auto px-8 z-100" />
           </motion.div>
         </div>
       </div>
