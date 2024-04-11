@@ -63,9 +63,9 @@ export default function Navbar() {
         <div>
           <div className="hidden md:block">
             <button className={`bg-primary hover:bg-cyan-700 text-white font-bold py-1 px-4 rounded text-md rounded-lg`}>
-              <a href="/projects">
-                Our work
-              </a>
+              <Link href="/projects">
+                  Our work
+              </Link>
             </button>
           </div>
           <div className="block md:hidden">
