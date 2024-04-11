@@ -16,8 +16,12 @@ module.exports = {
         'secondary': '#034C59',
         'accent': '#FFD700',
         'neutral-dark': '#283D3B',
-        'neutral-light': '#F0F4F8'
+        'neutral-light': '#F0F4F8',
+        'custom-light-turquoise': '#5BD1E5', 
       },
+      fontFamily: {
+        regular: ['var(--regular-font)'],
+      }
     },
   },
   plugins: [],

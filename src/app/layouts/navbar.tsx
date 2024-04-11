@@ -21,30 +21,34 @@ export default function Navbar() {
     {
       title: 'Projects',
       path: '/projects'
-    }, 
+    },  
     {
-      title: 'Blog',
-      path: '/blog'
-    }
+      title: 'FAQ',
+      path: '#FAQ'
+    },  
   ]
+
+  const openLink = (url: string) => { 
+    window.open(url, "_blank");
+  }
 
   // const router = useRouter();
   const pathName = usePathname();
 
   return (
-    <div className="bg-white fixed w-full z-50">
+    <div className="bg-white/75 backdrop-blur fixed w-full z-50">
       <div className="flex justify-between items-center max-w-screen-xl mx-auto py-4 px-6 flex-wrap">
         <div className="text-slate-700 font-bold text-xl flex items-center">
           <img src="/assets/images/backbones-logo.png" alt="" className="w-8 h-8 mr-2" />
           backbones.id
         </div>
         <div className="hidden lg:block md:block">
-          <ul className="flex justify-center bg-white pr-24 text-sm">
+          <ul className="flex justify-center items-center text-md mx-auto">
             {
               navbarList && navbarList.map((x, i) => {
                 return (
                   <li 
-                  className="mr-12 text-slate-700"
+                  className="mr-12 text-[#807e7e] font-medium"
                   key={i}
                   >
                     <span>
@@ -57,7 +61,14 @@ export default function Navbar() {
           </ul>
         </div>
         <div>
-          <div className="sm:block lg:hidden md:hidden">
+          <div className="hidden md:block">
+            <button className={`bg-primary hover:bg-cyan-700 text-white font-bold py-1 px-4 rounded text-md rounded-lg`}>
+              <a href="/projects">
+                Our work
+              </a>
+            </button>
+          </div>
+          <div className="block md:hidden">
             <MobileDrawer />
           </div>
         </div>
