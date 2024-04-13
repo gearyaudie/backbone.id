@@ -208,7 +208,7 @@ const Content = () => {
               <div className="max-w-[475px] flex-1 font-regular">
                 <div className="font-bold text-3xl">Grasp your user base and enhance your business</div>
                 <div className="text-stone-700 text-lg pt-4">
-                  Let's be real here, we don't always follow up with existing users. This is made possible
+                  Let&apos;s be real here, we don&apos;t always follow up with existing users. This is made possible
                   with a database of users on your hands, this will open up the window for new marketing opportunities .
                 </div>
                 <div></div>
@@ -227,14 +227,14 @@ const Content = () => {
                   <img src="/assets/images/pie-chart-2-1.png" alt="" className="mx-auto max-w-[250px] pt-8"/>
                   <div className="px-8 py-8">
                     <div className=" text-2xl font-semibold pb-4 text-[#E0FFFF]">50% of businesses are online</div>
-                    "Half of all businesses have embraced the online realm, marking a pivotal shift in today's marketplace dynamics.
+                    Half of all businesses have embraced the online realm, marking a pivotal shift in today&apos;s marketplace dynamics.
                   </div>
               </div>
               <div className="shadow-lg bg-[#02303A] text-[#AFEEEE] rounded-xl max-w-[300px]">
                   <img src="/assets/images/pie-chart-2-2.png" alt="" className="mx-auto max-w-[250px] pt-8"/>
                   <div className="px-8 py-8">
                     <div className=" text-2xl font-semibold pb-4 text-[#E0FFFF]">80% form brand impressions from websites</div>
-                    Your brand's digital storefront—the website—molds crucial first impressions.
+                    Your brand&apos;s digital storefront—the website—molds crucial first impressions.
                   </div>
               </div>
             </div>
