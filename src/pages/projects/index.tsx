@@ -48,7 +48,7 @@ export default function Projects() {
                   </div>
                   <Reveal>
                     <p className="py-4 max-w-lg text-stone-500 text-center justify-center mx-auto pb-16">
-                      Below are some of the projects we've worked on previously.
+                      Below are some of the projects we&apos;ve worked on previously.
                     </p> 
                   </Reveal>
                   <Reveal>
