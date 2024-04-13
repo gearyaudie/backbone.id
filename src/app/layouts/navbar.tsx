@@ -24,7 +24,7 @@ export default function Navbar() {
     },  
     {
       title: 'FAQ',
-      path: '#FAQ'
+      path: '/#FAQ'
     },  
   ]
 

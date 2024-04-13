@@ -146,7 +146,7 @@ const Content = () => {
         <main className="bg-secondary py-2 lg:py-32 lg:pt-[360px]">
           <div className="max-w-[1200px] mx-auto flex gap-6 mt-24 px-10" id="features">
             <div className="flex-[2.5] flex-col">
-              <div className="relative bg-[#45A29E] border-2 border-[#034C59] text-[#E0FFFF] h-fit pl-8 pt-4 pb-44 rounded-xl overflow-hidden">
+              <div className="relative bg-[#02303A] border-2 border-[#034C59] text-[#E0FFFF] h-fit pl-8 pt-4 pb-44 rounded-xl overflow-hidden">
                 <div className="text-2xl font-semibold py-2 text-[#E0FFFF]">Affordability</div>
                     Pricing that makes sense! No corners cut. <br />Get your money&apos;s worth with your desired package.
                     <div className="absolute bottom-0 right-0 left-10 bg-white w-full">
@@ -200,33 +200,44 @@ const Content = () => {
             </div>
           </div>
         </main>
+        <main className="bg-white max-w-[1200px] mx-auto py-32 px-20"> 
+            <div className="flex gap-16 justify-center items-center flex-col md:flex-row">
+              <div className="flex-1">
+                <img src="/assets/images/deployments.png" alt="" className="w-full shadow-xl max-w-[475px]" />
+              </div>
+              <div className="max-w-[475px] flex-1 font-regular">
+                <div className="font-bold text-3xl">Grasp your user base and enhance your business</div>
+                <div className="text-stone-700 text-lg pt-4">
+                  Let's be real here, we don't always follow up with existing users. This is made possible
+                  with a database of users on your hands, this will open up the window for new marketing opportunities .
+                </div>
+                <div></div>
+              </div>
+            </div>
+        </main>
         <main className="bg-black py-20 mb-32 z-10">
           <div className="max-w-screen-xl mx-auto">
-            <div className="font-bold text-white text-3xl text-center px-8 lg:text-6xl lg:leading-tight">
+            <div className="text-neutral-light text-lg text-center pb-2">TRENDS</div>
+            <div className="font-semibold text-white text-2xl text-center px-8 lg:text-5xl lg:leading-tight">
               <AnimatedText text="Take Advantage of Digitalization" />
-              <div className="mt-2 w-[150px] h-[4px] bg-accent mx-auto"></div>
+              {/* <div className="mt-2 w-[150px] h-[4px] bg-accent mx-auto"></div> */}
             </div>
-            <Reveal>
-              <div className="flex items-center max-w-[900px] mx-auto mt-16 gap-12 flex-wrap lg:flex-nowrap">
-                <img src="/assets/images/pie-chart-2-1.png" alt="" className="mx-auto max-w-[250px]"/>
-                <div className="text-stone-200 px-12">
-                  <div className="text-white text-3xl font-semibold pb-4">50% of businesses are online</div>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam provident repellendus alias doloremque 
-                  aspernatur distinctio sapiente sed, debitis consequuntur qui!
-                </div>
+            <div className="flex mt-16 mb-10 gap-10 justify-center items-center h-full flex-col md:flex-row">
+              <div className="shadow-lg bg-[#02303A] text-[#AFEEEE] rounded-xl max-w-[300px] h-full">
+                  <img src="/assets/images/pie-chart-2-1.png" alt="" className="mx-auto max-w-[250px] pt-8"/>
+                  <div className="px-8 py-8">
+                    <div className=" text-2xl font-semibold pb-4 text-[#E0FFFF]">50% of businesses are online</div>
+                    "Half of all businesses have embraced the online realm, marking a pivotal shift in today's marketplace dynamics.
+                  </div>
               </div>
-            </Reveal>
-            <Reveal>
-              <div className="flex items-center max-w-[900px] mx-auto mt-16 gap-12 flex-wrap lg:flex-nowrap">
-                <div className="text-stone-200 px-12 order-2 lg:order-1">
-                  <div className="text-white text-3xl font-semibold pb-4">50% of businesses are online</div>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam provident repellendus alias doloremque 
-                  aspernatur distinctio sapiente sed, debitis consequuntur qui!
-                </div>
-                <img src="/assets/images/pie-chart-2-2.png" alt="" className="mx-auto max-w-[250px] order-1 lg:order-2"/>
+              <div className="shadow-lg bg-[#02303A] text-[#AFEEEE] rounded-xl max-w-[300px]">
+                  <img src="/assets/images/pie-chart-2-2.png" alt="" className="mx-auto max-w-[250px] pt-8"/>
+                  <div className="px-8 py-8">
+                    <div className=" text-2xl font-semibold pb-4 text-[#E0FFFF]">80% form brand impressions from websites</div>
+                    Your brand's digital storefront—the website—molds crucial first impressions.
+                  </div>
               </div>
-            </Reveal>
-
+            </div>
           </div>
         </main>
         <main className="bg-white max-w-[900px] mx-auto mb-32 text-center" id="FAQ">
