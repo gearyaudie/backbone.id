@@ -158,8 +158,8 @@ const Content = () => {
                           <div className="text-black pl-4 text-lg font-medium">Pricing Details</div>
                         </div>
                         <hr className="px-2 max-w-[90%] mx-auto" />
-                        <div className="text-black px-8 pt-4">
-                          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis earum nisi, odio in consectetur voluptatem a quod explicabo obcaecati molestiae?
+                        <div className="text-black px-8 pt-4 pb-8">
+                            Coming soon..
                         </div>
                       </Reveal>
                     </div>
